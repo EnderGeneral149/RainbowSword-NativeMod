@@ -15,8 +15,5 @@
 		android:text="@string/yt"
 		android:gravity="center"/>
 	
-	
-	
-	
     
 </LinearLayout>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rainbow Sword</string>
+	<string name="twitter">Twitter</string>
+	<string name="yt">YouTube</string>
 </resources>

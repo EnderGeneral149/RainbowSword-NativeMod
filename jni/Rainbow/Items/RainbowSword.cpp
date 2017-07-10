@@ -4,9 +4,9 @@
 #include "minecraftpe/world/level/block/Block.h"
 #include "minecraftpe/world/entity/Mob.h"
 
-SwordItem::SwordItem(short id) : Item("rainbowSword", id - 256){
+SwordItem::SwordItem(short id) : Item("rainbowSword", id - 256){	//First part is referencing the constructor(the ::) The second part extends the original Item function to our function
 
-	mItems[id] = this;
+	mItems[id] = this;//Everything from this down is fairly obvious
 	setCategory(CreativeItemCategory::Tools);
 	setMaxStackSize(1);
 	setMaxDamage(2000);

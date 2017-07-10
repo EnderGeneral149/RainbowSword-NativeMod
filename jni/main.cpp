@@ -11,12 +11,12 @@
 #define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__))
 
 
-void (*_registerItems)();
+void (*_registerItems)();//I myself arent sure why we do this
 void registerItems(){
 	
-	Rainbow::registerItems();
+	Rainbow::registerItems();//This once again just references the function under the Rainbow class
 	
-	_registerItems();
+	_registerItems();//nor am I sure why about this one
 }
 
 void (*_initClientData)();
@@ -40,7 +40,7 @@ void initCreativeItems(){
 JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
 	LOGI("Hello world!");
 	
-	MSHookFunction((void*) &Item::registerItems, (void*) &registerItems, (void**) &_registerItems);
+	MSHookFunction((void*) &Item::registerItems, (void*) &registerItems, (void**) &_registerItems);//For all of these we follow the syntax of MSHook and input our own functions
 	MSHookFunction((void*) &Item::initClientData, (void*) &initClientData, (void**) &_initClientData);
 	MSHookFunction((void*) &Item::initCreativeItems, (void*) &initCreativeItems, (void**) &_initCreativeItems);
 	
